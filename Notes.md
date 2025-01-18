@@ -10,6 +10,9 @@ gobuster dir -u http://academy.htb -w /usr/share/wordlists/dirbuster/directory-l
 searchsploit <CMS Name/Package>
 
 metsaploit note:  
+search exploit in msfconsole:
+
+search <Software Name>
 Always run "check" command before running any exploit.
 Try with both x86 and x64 payloads:
 
