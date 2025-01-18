@@ -1,6 +1,11 @@
-Gobuster command:
+Nmap fast scan full ports:
 
+nmap -p- --min-rate 10000 <ip>
+
+Gobuster commands:
 gobuster dir -u http://10.129.89.220/ -w /usr/share/wordlists/dirb/common.txt
+Gobuster command with fast scan with speicifc extension type:
+gobuster dir -u http://academy.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x php -t 40
 
 searchsploit <CMS Name/Package>
 
