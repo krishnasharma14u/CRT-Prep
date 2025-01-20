@@ -2,12 +2,25 @@ Nmap fast scan full ports:
 
 nmap -p- --min-rate 10000 <ip>
 
+nmap command to fast scan UDP ports:
+
+sudo nmap -vvv -sU -p- --min-rate 5000 --max-retries 1 -oA udp-scan <IP>
+
+Search for the open ports from the output with following command:
+
+cat udp-scan.nmap | grep -v -e 'no-response' -e "closed" 
+
+nmap command vulnerability scan:
+
+nmap --script vuln <IP>
+
 Gobuster commands:
 gobuster dir -u http://10.129.89.220/ -w /usr/share/wordlists/dirb/common.txt
 Gobuster command with fast scan with speicifc extension type:
 gobuster dir -u http://academy.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x php -t 40
 
 searchsploit <CMS Name/Package>
+searchsploit -m <exploit> (to get the exact path of the exploit in kali machine)
 
 metsaploit note:  
 search exploit in msfconsole:
@@ -58,6 +71,22 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash
 You can use following command to set permission of id_rsa key to use it.
 
 chmod 600 id_rsa
+
+following command use to decode the hex strings:
+
+cat hype_key | xxd -r -p > id_rsa
+
+following command will decrypt the encrypted ssh keys if you have the password:
+
+openssl rsa -in hype_key_encrypted -out hype_key_decrypted
+
+Note: sometimes you face error in connecting to ssh with valid key use following flag in that case:
+
+ssh -i id_rsa root@10.129.84.172 -o PubkeyAcceptedKeyTypes=+ssh-rsa
+
+command to compile dirtycow exploits:
+
+gcc -pthread dc.c -o c -lcrypt
 
 following command shows the files which can be run as sudo
 
