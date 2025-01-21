@@ -23,8 +23,8 @@ searchsploit <CMS Name/Package>
 searchsploit -m <exploit> (to get the exact path of the exploit in kali machine)
 
 metsaploit note:  
-search exploit in msfconsole:
 
+search exploit in msfconsole:
 search <Software Name>
 Always run "check" command before running any exploit.
 Try with both x86 and x64 payloads:
@@ -41,6 +41,9 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export TERM=xterm
 export SHELL=bash
 
+following command shows the files which can be run as sudo
+
+sudo -l
 serach string in directory:
 grep -rni "passwd" www/ 
 
@@ -88,6 +91,3 @@ command to compile dirtycow exploits:
 
 gcc -pthread dc.c -o c -lcrypt
 
-following command shows the files which can be run as sudo
-
-sudo -l
