@@ -91,3 +91,9 @@ command to compile dirtycow exploits:
 
 gcc -pthread dc.c -o c -lcrypt
 
+Following are the commands to get deleted data from external USB device:
+mount
+sudo grep -aPo '[a-fA-F0-9]{32}' /dev/sdb
+
+Above command will recover the root flag from /dev/sdb
+
