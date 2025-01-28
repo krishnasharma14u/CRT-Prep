@@ -105,3 +105,6 @@ If wget commadn can be run as sudo without password, following command can be us
 
 sudo wget --input-file /root/root.txt
 
+Login as another user from terminal:
+
+sudo -u user /bin/bash
