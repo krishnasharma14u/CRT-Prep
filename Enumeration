@@ -1,0 +1,13 @@
+SMB ENume:
+
+List Directories:
+
+smbmap -H 10.10.10.3
+
+Connect to smb:
+
+smbclient -N //10.10.10.3/tmp
+
+If above command didn't work try:
+
+smbclient -N //10.10.10.3/tmp --option='client min protocol=NT1'
