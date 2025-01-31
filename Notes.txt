@@ -48,14 +48,19 @@ export SHELL=bash
 following command shows the files which can be run as sudo
 
 sudo -l
+
 serach string in directory:
+
 grep -rni "passwd" www/ 
+strings file.sdf | grep admin
 
 following file can show the websites other webiste's configuration if any internal application is running:
 
 cat /etc/apache2/sites-enabled/internal.conf
 
 Following command can be used to crack the hash:
+
+john –wordlist=/usr/share/wordlists/rockyou.txt hash
 
 john --wordlist=/usr/share/wordlists/rockyou.txt --format=raw-sha512 hash.txt 
 
