@@ -62,6 +62,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt --format=raw-sha512 hash.txt
 Following commadn can be use to crack thelinux  hashes with hashcat:
 
 hashcat -m 7400 sunday.hashes /usr/share/wordlists/rockyou.txt --force
+hashcat -m 100 admin.sha1 /usr/share/wordlists/rockyou.txt --force  
 
 Run following command for local port forwarding to your host:
 
