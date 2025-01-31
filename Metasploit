@@ -1,8 +1,6 @@
 searchsploit <CMS Name/Package>
 searchsploit -m <exploit> (to get the exact path of the exploit in kali machine)
 
-metsaploit note:  
-
 search exploit in msfconsole:
 search <Software Name>
 
