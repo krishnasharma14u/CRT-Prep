@@ -2,11 +2,15 @@ Nmap fast scan full ports:
 
 nmap -p- --min-rate 10000 <ip>
 
+Following command can give the comma seperated port list:
+
+cat nmap_output.txt | cut -d'/' -f1 | tr '\n' ', ' | sed 's/, $/\n/'
+
 nmap command to fast scan UDP ports:
 
 sudo nmap -vvv -sU -p- --min-rate 5000 --max-retries 1 -oA udp-scan <IP>
 
-Search for the open ports from the output with following command:
+Search for the open UDP ports from the output with following command:
 
 cat udp-scan.nmap | grep -v -e 'no-response' -e "closed" 
 
