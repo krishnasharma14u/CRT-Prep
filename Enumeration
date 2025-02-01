@@ -12,6 +12,10 @@ If above command didn't work try:
 
 smbclient -N -L //10.10.10.3/tmp --option='client min protocol=NT1'
 
+Access SMB with valid Creds:
+
+smbclient -W active.htb -U Administrator //10.10.10.3/tmp
+
 Nmap command to find smb vulns:
 
 nmap --script smb-vuln* -p 445 -oA nmap/smb_vulns 10.10.10.4
