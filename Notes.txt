@@ -18,6 +18,14 @@ nmap command vulnerability scan:
 
 nmap --script vuln <IP>
 
+Scan live ips through ping swep:
+
+for i in {1..254}; do (ping -c 1 172.19.0.${i} | grep "bytes from" | grep -v "Unreachable" &); done;
+
+Scan for ports on detected live address with ping swep:
+
+for port in {1..65535}; do echo > /dev/tcp/172.19.0.1/$port && echo "$port open"; done 2>/dev/null
+
 Gobuster commands:
 gobuster dir -u http://10.129.89.220/ -w /usr/share/wordlists/dirb/common.txt
 Gobuster command with fast scan with speicifc extension type:
