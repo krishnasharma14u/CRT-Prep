@@ -1,3 +1,11 @@
+DNS Enumeration:
+
+Zone Transfer commands:
+
+host -l friendzone.htb
+dig axfr friendzoneportal.red @10.10.10.123
+
+*****************************************************************************************************************************
 SMB ENume:
 
 List Directories:
@@ -7,6 +15,7 @@ smbmap -H 10.10.10.3
 Connect to smb:
 
 smbclient -N //10.10.10.3/tmp
+smbmap //10.10.10.123/general
 
 If above command didn't work try:
 
