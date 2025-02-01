@@ -23,3 +23,16 @@ NFS Enum:
 Shows the directories moundted on NFS:
 Showmount -e <target>
 
+
+*****************************************************************************************************************************
+
+Oracle Enumeration:
+
+SID Bruteforce
+
+auxiliary/scanner/oracle/sid_brute
+
+Credentials bruteforce
+
+auxiliary/admin/oracle/oracle_login
+
