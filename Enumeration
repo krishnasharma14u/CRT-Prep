@@ -27,6 +27,10 @@ NFS Enum:
 Shows the directories moundted on NFS:
 Showmount -e <target>
 
+mount nfs share with following command:
+
+
+mkdir /tmp/mount && mount 192.168.1.22:/home/karl /tmp/mount
 
 *****************************************************************************************************************************
 
