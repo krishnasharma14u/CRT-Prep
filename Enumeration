@@ -4,7 +4,23 @@ Zone Transfer commands:
 
 host -l friendzone.htb
 dig axfr friendzoneportal.red @10.10.10.123
+*****************************************************************************************************************************
+RPC Enumeration:
 
+Connect with RPC Service
+rpcclient -U "" -N 10.10.10.161
+
+get a list of users with enumdomusers:
+enumdomusers
+
+list the group:
+enumdomgroups
+
+query the user with rid:
+queryuser <rid>
+
+query the group with group rid
+querygroup <rid>
 *****************************************************************************************************************************
 SMB ENume:
 
