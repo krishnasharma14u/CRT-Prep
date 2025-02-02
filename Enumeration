@@ -21,6 +21,10 @@ queryuser <rid>
 
 query the group with group rid
 querygroup <rid>
+
+Once you get a list of user save it on file and run following command to extract usernames from the file
+cat domain-users.txt | cut -d'[' -f2 | cut -d']' -f1
+
 *****************************************************************************************************************************
 SMB ENume:
 
