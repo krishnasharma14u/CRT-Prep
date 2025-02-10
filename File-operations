@@ -1,0 +1,23 @@
+Intresting files read, extract and export commands:
+
+List and extract files inside a password protected ZIP file:
+
+7z l file.zip 
+7z x file.zip 
+********************************************************************************************************************************
+MDB files:
+
+Following command run a loop on MDB file and find tables which have data:
+
+db-tables backup.mdb | tr ' ' '\n' | grep . | while read table; do lines=$(mdb-export backup.mdb $table | wc -l); if [ $lines -gt 1 ]; then echo "$table: $lines"; fi; done
+
+Following command can be use to get the data from a table:
+
+mdb-export backup.mdb auth_user
+********************************************************************************************************************************
+
+PST File:
+
+Following command can be use to convert pst file to readable mbox file:
+
+readpst file.pst
