@@ -48,7 +48,15 @@ smbclient -W active.htb -U Administrator //10.10.10.3/tmp
 Nmap command to find smb vulns:
 
 nmap --script smb-vuln* -p 445 -oA nmap/smb_vulns 10.10.10.4
+nmap -sV -p445,139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=unsafe=1 10.129.136.29 -v
 
+Mount the SMB share:
+
+mount -t cifs //10.10.10.134/Backups/WindowsImageBackup/L4mpje-PC /mnt/L4mpje-PC/ -o user=anonymous
+
+Mount hard disk volumes:
+
+guestmount --add /mnt/WindowsImageBackup/L4mpje-PC/Backup\ 2019-02-22\ 124351/9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd --inspector --ro /mnt2/
 *****************************************************************************************************************************
 
 NFS Enum:
