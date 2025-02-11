@@ -4,6 +4,9 @@ Zone Transfer commands:
 
 host -l friendzone.htb
 dig axfr friendzoneportal.red @10.10.10.123
+
+Find subdomains with wfuzz
+wfuzz -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1mil-20000.txt -u https://10.10.10.113 -H "Host: FUZZ.redcross.htb" --hw 28 --hc 400
 *****************************************************************************************************************************
 RPC Enumeration:
 
