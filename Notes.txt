@@ -1,3 +1,7 @@
+Convert PEM file to PKCS12:
+
+openssl pkcs12 -inkey ca.key -in certificate.pem -export -out cert.p12
+
 Nmap fast scan full ports:
 
 nmap -p- --min-rate 10000 <ip>
