@@ -72,6 +72,11 @@ mount nfs share with following command:
 
 mkdir /tmp/mount && mount 192.168.1.22:/home/karl /tmp/mount
 mount -t nfs 10.129.228.109:/home/ross /mnt
+
+Create a user with specified uid & login:
+sudo usermod -u 2017 dummy 
+sudo su dummy -c bash
+
 *****************************************************************************************************************************
 
 Oracle Enumeration:
