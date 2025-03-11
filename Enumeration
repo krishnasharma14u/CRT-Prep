@@ -34,7 +34,7 @@ SMB ENume:
 List Directories:
 
 smbmap -H 10.10.10.3
-
+smbmap -H 10.10.10.172 -u SABatchJobs -p SABatchJobs -R 'users$'
 Connect to smb:
 
 smbclient -N //10.10.10.3/tmp
