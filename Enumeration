@@ -31,6 +31,10 @@ cat domain-users.txt | cut -d'[' -f2 | cut -d']' -f1
 *****************************************************************************************************************************
 SMB ENume:
 
+SMB Bruteforce
+
+root@kali# crackmapexec smb 10.10.10.172 -u users.txt -p pass.txt --continue-on-success
+
 List Directories:
 
 smbmap -H 10.10.10.3
